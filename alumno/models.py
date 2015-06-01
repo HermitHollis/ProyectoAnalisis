@@ -18,7 +18,7 @@ class Alumno(models.Model):
     plan_curricular = models.CharField(max_length = 10)
 
     acreditado = models.BooleanField(default = False)
-
+    imagen = models.ImageField("Imagen alumno", upload_to = "Proyecto/images/" , blank=True, null = True)
     def __str__(self):
         return self.nombre
     ##imagen = models.ImageField()
